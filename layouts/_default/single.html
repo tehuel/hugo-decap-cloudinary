@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+    <div>
+        {{ .Content }}
+    </div>
+
+    {{ with .Params.thumbnail }}
+        <img src="https://res.cloudinary.com/juliboreal/image/upload/c_fit,w_420/f_auto,q_auto/{{ . }}">
+    {{ end  }}
+{{ end }}
